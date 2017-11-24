@@ -33,7 +33,13 @@ namespace Domain.Business
             {
                 return "La direccion debe tener minimo 10 caracteres y maximo 50";
             }
-            return "OK";
+
+            if (entity.Sexo.Length < 5 || entity.Sexo.Length > 15)
+            {
+
+                return "El sexo debe tener minimo 5 caracteres y maximo 15";
+            }
+            return "Persona registrada exitosamente!";
         }
     }
 }

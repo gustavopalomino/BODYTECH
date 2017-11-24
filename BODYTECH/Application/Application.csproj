@@ -58,11 +58,13 @@
   <ItemGroup>
     <Compile Include="Abstracts\ICountryService.cs" />
     <Compile Include="Abstracts\IPersonService.cs" />
+    <Compile Include="Abstracts\IRutinaService.cs" />
     <Compile Include="Base\EntityService.cs" />
     <Compile Include="Base\IEntityService.cs" />
     <Compile Include="Base\IService.cs" />
     <Compile Include="Implements\CountryService.cs" />
     <Compile Include="Implements\PersonService.cs" />
+    <Compile Include="Implements\RutinaService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

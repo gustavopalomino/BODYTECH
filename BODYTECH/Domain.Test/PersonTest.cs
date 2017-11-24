@@ -94,5 +94,47 @@ namespace Domain.Test
             //Afirmar
             Assert.AreEqual("La direccion debe tener minimo 10 caracteres y maximo 50", resultado);
         }
+
+
+        [Test]
+        public void Person_Sexo_Incorrecto()
+        {
+            Person entity = new Person()
+            {
+                NumeroIdentificacion = "123456789",
+                Nombres = "Luis Martinez",
+                Celular = "3195617553",
+                Direccion = "Calle 13D # 11-55",
+                Sexo = "masculino y femenino"
+
+            };
+
+            //Actuar
+            string resultado = personBusiness.ValidatePerson(entity);
+
+            //Afirmar
+            Assert.AreEqual("El sexo debe tener minimo 5 caracteres y maximo 15", resultado);
+        }
+
+
+        [Test]
+        public void Person_Registro_Correcto()
+        {
+            Person entity = new Person()
+            {
+                NumeroIdentificacion = "123456789",
+                Nombres = "Luis Martinez",
+                Celular = "3195617553",
+                Direccion = "Calle 13D # 11-55",
+                Sexo = "masculino"
+
+            };
+
+            //Actuar
+            string resultado = personBusiness.ValidatePerson(entity);
+
+            //Afirmar
+            Assert.AreEqual("Persona registrada exitosamente!", resultado);
+        }
     }
 }

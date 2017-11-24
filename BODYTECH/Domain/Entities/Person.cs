@@ -28,6 +28,10 @@ namespace Domain.Entities
         [MaxLength(100)]
         public string Direccion { get; set; }
 
+        [Required]
+        [MaxLength(15)]
+        public string Sexo { get; set; }
+
         [Display(Name = "Country")]
         public int CountryId { get; set; }
 
