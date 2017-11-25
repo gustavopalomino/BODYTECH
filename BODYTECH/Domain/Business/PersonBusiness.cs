@@ -39,7 +39,30 @@ namespace Domain.Business
 
                 return "El sexo debe tener minimo 5 caracteres y maximo 15";
             }
+            if (entity.Altura < 50 || entity.Altura > 300)
+            {
+                return "La altura minima es 50 Cm y maximo 300 Cm";
+
+            }
+
+            
+
             return "Persona registrada exitosamente!";
         }
+
+
+        //public string SoloNumero(Person entity)
+        //{
+
+        //    bool EsEntero = decimal.TryParse(Console.ReadLine(), out entity.Altura);
+
+        //    if (!EsEntero)
+        //    {
+
+        //    }
+
+        //}
+
+
     }
 }

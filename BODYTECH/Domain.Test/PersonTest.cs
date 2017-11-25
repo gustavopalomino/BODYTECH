@@ -27,10 +27,14 @@ namespace Domain.Test
             Person entity = new Person()
             {
                 NumeroIdentificacion = "1234",
-                Nombres="Luis",
-                Celular="3193675413",
-                Direccion="Calle 13D # 11-55"
-
+                Nombres = "Luis",
+                Celular = "3193675413",
+                Direccion = "Calle 13D # 11-55",
+                Altura = 55,
+                Pecho = 60,
+                Cintura = 30,
+                Cadena = "Cadena",
+                Nota = "Problemas de corazón"
             };
 
             //Actuar
@@ -48,8 +52,12 @@ namespace Domain.Test
                 NumeroIdentificacion = "123456789",
                 Nombres = "Lu",
                 Celular = "3193675413",
-                Direccion = "Calle 13D # 11-55"
-
+                Direccion = "Calle 13D # 11-55",
+                Altura = 55,
+                Pecho = 60,
+                Cintura = 30,
+                Cadena = "Cadena",
+                Nota = "Problemas de corazón"
             };
 
             //Actuar
@@ -66,8 +74,12 @@ namespace Domain.Test
                 NumeroIdentificacion = "123456789",
                 Nombres = "Luis Martinez",
                 Celular = "3193",
-                Direccion = "Calle 13D # 11-55"
-
+                Direccion = "Calle 13D # 11-55",
+                Altura = 55,
+                Pecho = 60,
+                Cintura = 30,
+                Cadena = "Cadena",
+                Nota = "Problemas de corazón"
             };
 
             //Actuar
@@ -84,8 +96,12 @@ namespace Domain.Test
                 NumeroIdentificacion = "123456789",
                 Nombres = "Luis Martinez",
                 Celular = "3195617553",
-                Direccion = "55"
-
+                Direccion = "55",
+                Altura = 55,
+                Pecho = 60,
+                Cintura = 30,
+                Cadena = "Cadena",
+                Nota = "Problemas de corazón"
             };
 
             //Actuar
@@ -105,8 +121,12 @@ namespace Domain.Test
                 Nombres = "Luis Martinez",
                 Celular = "3195617553",
                 Direccion = "Calle 13D # 11-55",
-                Sexo = "masculino y femenino"
-
+                Sexo = "masculino y femenino",
+                Altura = 55,
+                Pecho = 60,
+                Cintura = 30,
+                Cadena = "Cadena",
+                Nota = "Problemas de corazón"
             };
 
             //Actuar
@@ -118,6 +138,57 @@ namespace Domain.Test
 
 
         [Test]
+        public void Person_AlturaInferior_Incorrecto()
+        {
+            Person entity = new Person()
+            {
+                NumeroIdentificacion = "123456789",
+                Nombres = "Luis Martinez",
+                Celular = "3195617553",
+                Direccion = "Calle 13D # 11-55",
+                Sexo = "masculino",
+                Altura = 49,
+                Pecho = 60,
+                Cintura = 30,
+                Cadena = "Cadena",
+                Nota = "Problemas de corazón"
+            };
+
+            //Actuar
+            string resultado = personBusiness.ValidatePerson(entity);
+
+            //Afirmar
+            Assert.AreEqual("La altura minima es 50 Cm y maximo 300 Cm", resultado);
+        }
+
+        [Test]
+        public void Person_AlturaSuperior_Incorrecto()
+        {
+            Person entity = new Person()
+            {
+                NumeroIdentificacion = "123456789",
+                Nombres = "Luis Martinez",
+                Celular = "3195617553",
+                Direccion = "Calle 13D # 11-55",
+                Sexo = "masculino",
+                Altura = 301,
+                Pecho = 60,
+                Cintura = 30,
+                Cadena = "Cadena",
+                Nota = "Problemas de corazón"
+            };
+
+            //Actuar
+            string resultado = personBusiness.ValidatePerson(entity);
+
+            //Afirmar
+            Assert.AreEqual("La altura minima es 50 Cm y maximo 300 Cm", resultado);
+        }
+
+
+
+
+        [Test]
         public void Person_Registro_Correcto()
         {
             Person entity = new Person()
@@ -126,8 +197,12 @@ namespace Domain.Test
                 Nombres = "Luis Martinez",
                 Celular = "3195617553",
                 Direccion = "Calle 13D # 11-55",
-                Sexo = "masculino"
-
+                Sexo = "masculino",
+                Altura = 55,
+                Pecho = 60,
+                Cintura = 30,
+                Cadena = "Cadena",
+                Nota = "Problemas de corazón"
             };
 
             //Actuar

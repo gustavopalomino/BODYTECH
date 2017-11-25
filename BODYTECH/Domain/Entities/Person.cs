@@ -32,6 +32,34 @@ namespace Domain.Entities
         [MaxLength(15)]
         public string Sexo { get; set; }
 
+        [Required]
+        [MaxLength(250)]
+        public double Peso { get; set; }
+
+        //----------------------------------------------------------------
+        [Required]
+        [MaxLength(300)]
+        public double Altura { get; set; }
+
+        [Required]
+        [MaxLength(100)]
+        public double Pecho { get; set; }
+
+        [Required]
+        [MaxLength(150)]
+        public double Cintura { get; set; }
+
+        [Required]
+        [MaxLength(150)]
+        public string Cadena { get; set; }
+
+        [Required]
+        [MaxLength(200)]
+        public string Nota { get; set; }
+
+
+
+
         [Display(Name = "Country")]
         public int CountryId { get; set; }
 
