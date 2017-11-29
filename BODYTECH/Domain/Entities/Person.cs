@@ -12,62 +12,37 @@ namespace Domain.Entities
     //[Table("Person")]
     public class Person : Entity<int>
     {
-        [Required]
+        [Key]
+        [Required] 
         [MaxLength(10)]
         public string NumeroIdentificacion { get; set; }
 
         [Required]
-        [MaxLength(50)]
+        [MaxLength(30)]
         public string Nombres { get; set; }
 
         [Required]
-        [MaxLength(20)]
-        public string Celular { get; set; }
-
-        [Required]
-        [MaxLength(100)]
-        public string Direccion { get; set; }
-
-        [Required]
-        [MaxLength(15)]
+        [MaxLength(9)]
         public string Sexo { get; set; }
 
-        [Required]
-        [MaxLength(250)]
-        public double Peso { get; set; }
-
-        //----------------------------------------------------------------
-        [Required]
-        [MaxLength(300)]
-        public double Altura { get; set; }
 
         [Required]
-        [MaxLength(100)]
-        public double Pecho { get; set; }
-
-        [Required]
-        [MaxLength(150)]
-        public double Cintura { get; set; }
-
-        [Required]
-        [MaxLength(150)]
-        public string Cadena { get; set; }
-
-        [Required]
-        [MaxLength(200)]
-        public string Nota { get; set; }
+        [MaxLength(10)]
+        public string Telefono { get; set; }
 
 
-
+        [MaxLength(40)]
+        public string Direccion { get; set; }
 
         [Display(Name = "Country")]
         public int CountryId { get; set; }
 
         [ForeignKey("CountryId")]
         public virtual Country Country { get; set; }
-        public string ValidatePerson(IPersonBusiness strategy)
+
+        public string ValidarPersona(IPersonaBusiness strategy)
         {
-            return strategy.ValidatePerson(this);
+            return strategy.ValidarPersona(this);
         }
     }
 

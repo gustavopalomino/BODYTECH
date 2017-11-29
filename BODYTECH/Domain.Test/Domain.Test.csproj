@@ -49,8 +49,11 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClienteTest.cs" />
     <Compile Include="DiasTest.cs" />
+    <Compile Include="EjercicioTest.cs" />
     <Compile Include="PersonTest.cs" />
+    <Compile Include="RutinasTest.cs" />
     <Compile Include="RutinaTest.cs" />
     <Compile Include="TestClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

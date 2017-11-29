@@ -30,12 +30,12 @@ namespace Application.Test
             _service = new PersonService(_mockUnitWork.Object, _mockRepository.Object);
             listPerson = new List<Person>()
             {
-                new Person () {Id=1, NumeroIdentificacion="1064117532", Nombres="Ronal Varela", Celular="3193765643", Direccion="Calle 15 #14-44"},
-                new Person () {Id=2, NumeroIdentificacion="1064114331", Nombres="Javier Nuñes", Celular="3162739391", Direccion="Carrera 18 #12-14"},
-                new Person () {Id=3, NumeroIdentificacion="1064145663", Nombres="Jeffri Ortiz", Celular="3193756753", Direccion="Calle 9 #2-65"},
-                new Person () {Id=4, NumeroIdentificacion="1064116666", Nombres="Gustavo Palomino", Celular="3195643421", Direccion="Calle 2 #29-50"},
-                new Person () {Id=5, NumeroIdentificacion="1064116563", Nombres="Luis Ovalle", Celular="3195640001", Direccion="Calle 3 #37-55"},
-                new Person () {Id=6, NumeroIdentificacion="1064116777", Nombres="Andrea Garcia", Celular="3195643342", Direccion="Calle 19 #1-10"},
+                new Person () {Id=1, NumeroIdentificacion="1064117532", Nombres="Ronal Varela", Telefono="3193765643", Direccion="Calle 15 #14-44"},
+                new Person () {Id=2, NumeroIdentificacion="1064114331", Nombres="Javier Nuñes", Telefono="3162739391", Direccion="Carrera 18 #12-14"},
+                new Person () {Id=3, NumeroIdentificacion="1064145663", Nombres="Jeffri Ortiz", Telefono="3193756753", Direccion="Calle 9 #2-65"},
+                new Person () {Id=4, NumeroIdentificacion="1064116666", Nombres="Gustavo Palomino", Telefono="3195643421", Direccion="Calle 2 #29-50"},
+                new Person () {Id=5, NumeroIdentificacion="1064116563", Nombres="Luis Ovalle", Telefono="3195640001", Direccion="Calle 3 #37-55"},
+                new Person () {Id=6, NumeroIdentificacion="1064116777", Nombres="Andrea Garcia", Telefono="3195643342", Direccion="Calle 19 #1-10"},
 
             };
         }
@@ -59,7 +59,7 @@ namespace Application.Test
         {
             //Arranque
             int Id = 1;
-            Person p = new Person() { Id = 1, NumeroIdentificacion = "1076543652", Nombres = "Ronal Varela", Celular = "3005678765", Direccion = "Calle 5 # 6-20" };
+            Person p = new Person() { Id = 1, NumeroIdentificacion = "1076543652", Nombres = "Ronal Varela", Telefono = "3005678765", Direccion = "Calle 5 # 6-20" };
             _mockRepository.Setup(m => m.Add(p)).Returns((Person pe) =>
               {
                   pe.Id = Id;
