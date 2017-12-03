@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Domain.Entities;
 using Application.Base;
- 
+
 namespace Application.Abstract
 {
-    public interface IPersonService :  IEntityService<Personas>
+    public interface IAdministradorService : IEntityService<Administrador>
     {
     }
 }

@@ -11,17 +11,17 @@ using Application.Base;
 
 namespace Application.Implements
 {
-    public class PersonService : EntityService<Personas>, IPersonService
+    public class AdministradorService : EntityService<Administrador>, IAdministradorService
     {
         readonly IUnitOfWork _unitOfWork;
-        readonly IPersonRepository _personRepository; 
+        readonly IAdministradorRepository _administradorRepository;
 
-        public PersonService(IUnitOfWork unitOfWork, IPersonRepository personRepository)
-            : base(unitOfWork, personRepository)
+        public AdministradorService(IUnitOfWork unitOfWork, IAdministradorRepository administradorRepository)
+            : base(unitOfWork, administradorRepository)
         {
             _unitOfWork = unitOfWork;
-            _personRepository = personRepository;
+            _administradorRepository = administradorRepository;
         }
-
     }
 }
+ 

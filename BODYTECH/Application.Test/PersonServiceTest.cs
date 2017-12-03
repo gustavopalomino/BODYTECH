@@ -9,7 +9,7 @@ using Application.Implements;
 using Application.Abstract;
 using Domain.Abstracts;
 using Domain.Entities;
-using Application.Contracts;
+using Application.Contracts; 
 
 
 namespace Application.Test
