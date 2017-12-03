@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="AdministradorServiceTest.cs" />
     <Compile Include="ClienteServiceTest.cs" />
+    <Compile Include="Cliente_PaquetesTest.cs" />
     <Compile Include="CountryServiceTest.cs" />
     <Compile Include="DiasServiceTest.cs" />
     <Compile Include="PersonServiceTest.cs" />

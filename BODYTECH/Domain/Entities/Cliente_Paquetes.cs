@@ -20,7 +20,7 @@ namespace Domain.Entities
         public DateTime FechaFinal { get; set; }
 
         [Display(Name = "Cliente")]
-        public int CiudadId { get; set; }
+        public int IdCliente { get; set; }
 
         [ForeignKey("IdCliente")]
         public virtual Cliente Cliente { get; set; }
