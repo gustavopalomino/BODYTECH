@@ -15,6 +15,6 @@ namespace Domain.Entities
         [Display(Name = "Country Name")]
         public string Name { get; set; }
 
-        public virtual IEnumerable<Person> Persons { get; set; }
+        public virtual IEnumerable<Personas> Personas { get; set; }
     }
 }

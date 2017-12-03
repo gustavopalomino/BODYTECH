@@ -24,45 +24,45 @@ namespace Infraestructure.Data.Test
             objRepo = new CountryRepository(databaseContext);
         }
 
-        //[Test]
-        //public void Country_Repository_Get_ALL()
-        //{
-        //    Console.WriteLine("Ejecutando ALL");
-            
-        //    //Act
-        //    var result = objRepo.GetAll().ToList();
+        [Test]
+        public void Country_Repository_Get_ALL()
+        {
+            Console.WriteLine("Ejecutando ALL");
 
-        //    //Assert
+            //Act
+            var result = objRepo.GetAll().ToList();
 
-        //    Assert.IsNotNull(result);
-        //    Assert.AreEqual(3, result.Count);
-        //    Assert.AreEqual("US", result[0].Name);
-        //    Assert.AreEqual("India", result[1].Name);
-        //    Assert.AreEqual("Russia", result[2].Name);
-        //}
+            //Assert
 
-        //[Test]
-        //public void Country_Repository_Create()
-        //{
-        //    Console.WriteLine("Ejecutando NEW");
-        //    //Arrange
-        //    Country c = new Country() { Name = "UK" };
+            Assert.IsNotNull(result);
+            Assert.AreEqual(3, result.Count);
+            Assert.AreEqual("US", result[0].Name);
+            Assert.AreEqual("India", result[1].Name);
+            Assert.AreEqual("Russia", result[2].Name);
+        }
 
-        //    //Act
-        //    objRepo.Add(c);
-        //    databaseContext.SaveChanges();
+        [Test]
+        public void Country_Repository_Create()
+        {
+            Console.WriteLine("Ejecutando NEW");
+            //Arrange
+            Country c = new Country() { Name = "UK" };
 
-        //    var lst = objRepo.GetAll().ToList();
+            //Act
+            objRepo.Add(c);
+            databaseContext.SaveChanges();
 
-        //    //Assert
+            var lst = objRepo.GetAll().ToList();
 
-        //    Assert.AreEqual(4, lst.Count);
-        //    Assert.AreEqual("UK", lst.Last().Name);
+            //Assert
 
-        //    objRepo.Delete(c);
-        //    databaseContext.SaveChanges();
+            Assert.AreEqual(4, lst.Count);
+            Assert.AreEqual("UK", lst.Last().Name);
 
-        //}
+            objRepo.Delete(c);
+            databaseContext.SaveChanges();
+
+        }
     }
 }
 

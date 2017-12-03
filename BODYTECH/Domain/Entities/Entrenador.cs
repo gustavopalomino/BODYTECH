@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Entities
 {
-    public class Entrenador : Person
+    public class Entrenador : Personas
     {
         //[Display(Name = "Id Persona")]
         //public int Numero_Identificacion { get; set; }
@@ -26,5 +26,18 @@ namespace Domain.Entities
         [MaxLength(30)]
         public string AreaTrabajo { get; set; }
 
+        public string ValidarEntrenador()
+        {
+            if(Certificado.Length != 2)
+            {
+                return "El certificado solo puede tener 2 caracteres: Si o No";
+            }
+            if (AreaTrabajo.Length < 3 || AreaTrabajo.Length > 30)
+            {
+                return "El area de trabajo debe tener entre 3 y 30 caracteres";
+            }
+
+            return "Entrenador registrado correctamente!";
+        }
     }
 }

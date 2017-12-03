@@ -17,15 +17,33 @@ namespace Domain.Entities
         public int Repeticiones { get; set; }
 
         [Display(Name = "Rutina")]
-        public int IdEntrenador { get; set; }
+        public int IdRutina { get; set; }
 
         [ForeignKey("IdRutina")]
-        public virtual Rutina Rutina { get; set; }
+        public virtual Rutinas Rutinas { get; set; }
 
         [Display(Name = "Ejercicio")]
         public int IdEjercicio { get; set; }
 
         [ForeignKey("IdEjercicio")]
         public virtual Ejercicio Ejercicio { get; set; }
+
+        public string ValidarRutinaEjercicio ()
+        {
+
+            if (Series < 1)
+            {
+                return "Las series no pueden ser igual a cero o negativas";
+            }
+
+            if (Repeticiones < 1)
+            {
+                return "Las repeticiones no pueden ser igual a cero o negativas";
+            }
+
+            return "Registrado correctamente";
+        }
+
+
     }
 }

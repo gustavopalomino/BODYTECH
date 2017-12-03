@@ -12,11 +12,11 @@ namespace Domain.Test
     [TestFixture]
     public class DiasTest
     {
-        DiasBusiness diasBusiness;
+        Dias dias;
         [SetUp]
         public void Initialize()
         {
-            diasBusiness = new DiasBusiness();
+            dias = new Dias();
         }
 
 
@@ -30,7 +30,7 @@ namespace Domain.Test
             };
 
             //Actuar
-            string resultado = diasBusiness.ValidateDias(entity);
+            string resultado = entity.ValidateDias();
 
             //Afirmar
             Assert.AreEqual("El nombre del dia debe tener minimo 3 caracteres y maximo 20!", resultado);
@@ -46,7 +46,7 @@ namespace Domain.Test
             };
 
             //Actuar
-            string resultado = diasBusiness.ValidateDias(entity);
+            string resultado = entity.ValidateDias();
 
             //Afirmar
             Assert.AreEqual("Dia Regitrado correctamente!", resultado);

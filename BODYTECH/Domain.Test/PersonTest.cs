@@ -13,11 +13,11 @@ namespace Domain.Test
     [TestFixture]
     public class PersonTest
     {
-        PersonaBusiness personaBusiness;
+        Personas personas;
         [SetUp]
         public void Initialize()
         {
-            personaBusiness = new PersonaBusiness();
+            personas = new Personas();
         }
 
         //Persona
@@ -25,7 +25,7 @@ namespace Domain.Test
         [Test]
         public void Persona_NumeroDocumento_Incorrecto()
         {
-            Person entity = new Person()
+            Personas entity = new Personas()
             {
                 NumeroIdentificacion = "1234",
                 Nombres = "Luis",
@@ -36,7 +36,7 @@ namespace Domain.Test
             };
 
             //Actuar
-            string resultado = personaBusiness.ValidarPersona(entity);
+            string resultado = entity.ValidarPersona();
 
             //Afirmar
             Assert.AreEqual("El numero de documento debe tener entre 8 y 10 caracteres", resultado);
@@ -45,7 +45,7 @@ namespace Domain.Test
         [Test]
         public void Persona_Nombres_Incorrecto()
         {
-            Person entity = new Person()
+            Personas entity = new Personas()
             {
                 NumeroIdentificacion = "123456789",
                 Nombres = "Lu",
@@ -56,7 +56,7 @@ namespace Domain.Test
             };
 
             //Actuar
-            string resultado = personaBusiness.ValidarPersona(entity);
+            string resultado = entity.ValidarPersona();
 
             //Afirmar
             Assert.AreEqual("El nombre debe tener minimo 3 caracteres y maximo 50", resultado);
@@ -65,7 +65,7 @@ namespace Domain.Test
         [Test]
         public void Persona_Telefono_Incorrecto()
         {
-            Person entity = new Person()
+            Personas entity = new Personas()
             {
                 NumeroIdentificacion = "123456789",
                 Nombres = "Luis Martinez",
@@ -76,7 +76,7 @@ namespace Domain.Test
             };
 
             //Actuar
-            string resultado = personaBusiness.ValidarPersona(entity);
+            string resultado = entity.ValidarPersona();
 
             //Afirmar
             Assert.AreEqual("El telefono debe tener minimo 7 caracteres y maximo 10", resultado);
@@ -85,7 +85,7 @@ namespace Domain.Test
         [Test]
         public void Persona_Direccion_Incorrecto()
         {
-            Person entity = new Person()
+            Personas entity = new Personas()
             {
                 NumeroIdentificacion = "123456789",
                 Nombres = "Luis Martinez",
@@ -96,7 +96,7 @@ namespace Domain.Test
             };
 
             //Actuar
-            string resultado = personaBusiness.ValidarPersona(entity);
+            string resultado = entity.ValidarPersona();
 
             //Afirmar
             Assert.AreEqual("La direccion debe tener minimo 10 caracteres y maximo 50", resultado);
@@ -105,7 +105,7 @@ namespace Domain.Test
         [Test]
         public void Persona_Sexo_Incorrecto()
         {
-            Person entity = new Person()
+            Personas entity = new Personas()
             {
                 NumeroIdentificacion = "123456789",
                 Nombres = "Luis Martinez",
@@ -116,7 +116,7 @@ namespace Domain.Test
             };
 
             //Actuar
-            string resultado = personaBusiness.ValidarPersona(entity);
+            string resultado = entity.ValidarPersona();
 
             //Afirmar
             Assert.AreEqual("El sexo debe tener minimo 5 caracteres y maximo 15", resultado);
@@ -125,7 +125,7 @@ namespace Domain.Test
         [Test]
         public void Persona_Registro_Correcto()
         {
-            Person entity = new Person()
+            Personas entity = new Personas()
             {
                 NumeroIdentificacion = "123456789",
                 Nombres = "Luis Martinez",
@@ -136,7 +136,7 @@ namespace Domain.Test
             };
 
             //Actuar
-            string resultado = personaBusiness.ValidarPersona(entity);
+            string resultado = entity.ValidarPersona();
 
             //Afirmar
             Assert.AreEqual("Persona registrada exitosamente!", resultado);

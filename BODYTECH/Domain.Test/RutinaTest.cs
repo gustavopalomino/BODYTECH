@@ -11,44 +11,44 @@ namespace Domain.Test
 {
     public class RutinaTest
     {
-        RutinaBusiness rutinaBusiness;
-        [SetUp]
-        public void Initialize()
-        {
-            rutinaBusiness = new RutinaBusiness();
-        }
+        //RutinaBusiness rutinaBusiness;
+        //[SetUp]
+        //public void Initialize()
+        //{
+        //    rutinaBusiness = new RutinaBusiness();
+        //}
 
 
-        [Test]
-        public void Rutina_Nombre_Incorrecto()
-        {
-            Rutina entity = new Rutina()
-            {
-                Nombre_Rutina = "ro"
+        //[Test]
+        //public void Rutina_Nombre_Incorrecto()
+        //{
+        //    Rutina entity = new Rutina()
+        //    {
+        //        Nombre_Rutina = "ro"
 
-            };
+        //    };
 
-            //Actuar
-            string resultado = rutinaBusiness.ValidateRutina(entity);
+        //    //Actuar
+        //    string resultado = rutinaBusiness.ValidateRutina(entity);
 
-            //Afirmar
-            Assert.AreEqual("El nombre de la rutina debe tener minimo 3 caracteres y maximo 40", resultado);
-        }
+        //    //Afirmar
+        //    Assert.AreEqual("El nombre de la rutina debe tener minimo 3 caracteres y maximo 40", resultado);
+        //}
 
-        [Test]
-        public void Rutina_Registro_Correcto()
-        {
-            Rutina entity = new Rutina()
-            {
-                Nombre_Rutina = "Rutina A"
+        //[Test]
+        //public void Rutina_Registro_Correcto()
+        //{
+        //    Rutina entity = new Rutina()
+        //    {
+        //        Nombre_Rutina = "Rutina A"
 
-            };
+        //    };
 
-            //Actuar
-            string resultado = rutinaBusiness.ValidateRutina(entity);
+        //    //Actuar
+        //    string resultado = rutinaBusiness.ValidateRutina(entity);
 
-            //Afirmar
-            Assert.AreEqual("Rutina registrada correctamente!", resultado);
-        }
+        //    //Afirmar
+        //    Assert.AreEqual("Rutina registrada correctamente!", resultado);
+        //}
     }
 }

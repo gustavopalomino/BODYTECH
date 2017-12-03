@@ -11,11 +11,11 @@ namespace Domain.Test
 {
     public class RutinasTest
     {
-        RutinasBusiness rutinasBusiness;
+        Rutinas rutinas;
         [SetUp]
         public void Initialize()
         {
-            rutinasBusiness = new RutinasBusiness();
+            rutinas = new Rutinas();
         }
 
 
@@ -29,7 +29,7 @@ namespace Domain.Test
             };
 
             //Actuar
-            string resultado = rutinasBusiness.ValidateRutina(entity);
+            string resultado = entity.ValidateRutina();
 
             //Afirmar
             Assert.AreEqual("El nombre de la rutina debe tener minimo 3 caracteres y maximo 40", resultado);
@@ -45,7 +45,7 @@ namespace Domain.Test
             };
 
             //Actuar
-            string resultado = rutinasBusiness.ValidateRutina(entity);
+            string resultado = entity.ValidateRutina();
 
             //Afirmar
             Assert.AreEqual("Rutina registrada correctamente!", resultado);

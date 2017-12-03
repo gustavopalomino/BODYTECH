@@ -14,5 +14,15 @@ namespace Domain.Entities
         [Required]
         [MaxLength(20)]
         public string Nombre_Dia { get; set; }
+
+        public string ValidateDias()
+        {
+            if (Nombre_Dia.Length < 3 || Nombre_Dia.Length > 20)
+            {
+                return "El nombre del dia debe tener minimo 3 caracteres y maximo 20!";
+            }
+
+            return "Dia Regitrado correctamente!";
+        }
     }
 }

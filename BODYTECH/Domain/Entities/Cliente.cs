@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    public class Cliente : Person
+    public class Cliente : Personas
     {
         [MaxLength(40)]
         public string email { get; set; }
@@ -26,9 +26,18 @@ namespace Domain.Entities
         [MaxLength(40)]
         public double Peso { get; set; }
 
-        public string ValidarCliente(IClienteBusiness strategy)
+        public string ValidarCliente()
         {
-            return strategy.ValidarCliente(this);
+            if (Estatura < 1 || Estatura > 3)
+            {
+                return "La estatura de un cliente debe estar entre 1 y 3 metros";
+            }
+
+            if (Peso < 0)
+            {
+                return "El peso de un cliente no puede ser negativo";
+            }
+            return "Cliente registrado exitosamente!";
         }
     }
 }

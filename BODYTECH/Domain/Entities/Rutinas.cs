@@ -33,5 +33,14 @@ namespace Domain.Entities
         [ForeignKey("IdCliente")]
         public virtual Cliente Cliente { get; set; }
 
+        public string ValidateRutina()
+        {
+            if (Nombre.Length < 3 || Nombre.Length > 40)
+            {
+                return "El nombre de la rutina debe tener minimo 3 caracteres y maximo 40";
+            }
+
+            return "Rutina registrada correctamente!";
+        }
     }
 }

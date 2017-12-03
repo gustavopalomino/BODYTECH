@@ -11,7 +11,7 @@ using Application.Base;
 
 namespace Application.Implements
 {
-    public class PersonService : EntityService<Person>, IPersonService
+    public class PersonService : EntityService<Personas>, IPersonService
     {
         readonly IUnitOfWork _unitOfWork;
         readonly IPersonRepository _personRepository;

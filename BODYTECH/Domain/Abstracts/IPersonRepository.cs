@@ -7,7 +7,7 @@ using Domain.Entities;
 
 namespace Domain.Abstracts
 {
-    public interface IPersonRepository : IGenericRepository<Person>
+    public interface IPersonRepository : IGenericRepository<Personas>
     {
     }
 }

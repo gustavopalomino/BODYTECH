@@ -15,9 +15,14 @@ namespace Domain.Entities
         [MaxLength(40)]
         public string Nombre { get; set; }
 
-        public string ValidarEjercicio(IEjercicioBusiness strategy)
+        public string ValidarEjercicio()
         {
-            return strategy.ValidarEjercicio(this);
+            if (Nombre.Length < 3 || Nombre.Length > 40)
+            {
+                return "El nombre del ejercicio debe tener minimo 3 y maximo 40 caracteres";
+            }
+
+            return "Ejercicio registrado exitosamente!";
         }
     }
 

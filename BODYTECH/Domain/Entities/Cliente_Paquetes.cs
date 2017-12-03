@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-
 namespace Domain.Entities
 {
     public class Cliente_Paquetes : Entity<int>
@@ -31,5 +30,18 @@ namespace Domain.Entities
 
         [ForeignKey("IdPaquetes")]
         public virtual Paquetes Paquetes { get; set; }
-    }
-}
+
+        public string ValidarClientePaquete()
+        {
+            if (FechaInicio > FechaFinal)
+            {
+                return "La fecha final debe ser mayor a la fecha inicio";  
+            }
+
+            return "Registro correcto";
+
+        }
+
+        }
+        }
+

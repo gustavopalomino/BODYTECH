@@ -13,11 +13,11 @@ namespace Domain.Test
     [TestFixture]
     public class EjercicioTest
     {
-        EjercicioBusiness ejercicioBusiness;
+        Ejercicio ejercicio;
         [SetUp]
         public void Initialize()
         {
-            ejercicioBusiness = new EjercicioBusiness();
+            ejercicio = new Ejercicio();
         }
 
         //Persona
@@ -32,7 +32,7 @@ namespace Domain.Test
             };
 
             //Actuar
-            string resultado = ejercicioBusiness.ValidarEjercicio(entity);
+            string resultado = entity.ValidarEjercicio();
 
             //Afirmar
             Assert.AreEqual("El nombre del ejercicio debe tener minimo 3 y maximo 40 caracteres", resultado);
@@ -47,7 +47,7 @@ namespace Domain.Test
             };
 
             //Actuar
-            string resultado = ejercicioBusiness.ValidarEjercicio(entity);
+            string resultado = entity.ValidarEjercicio();
 
             //Afirmar
             Assert.AreEqual("Ejercicio registrado exitosamente!", resultado);

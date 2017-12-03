@@ -21,7 +21,7 @@ namespace Infraestructure.Data
         {
 
         }
-        public DbSet<Person> Persons { get; set; }
+        public DbSet<Personas> Persons { get; set; }
         public DbSet<Country> Countries { get; set; }
     }
 }

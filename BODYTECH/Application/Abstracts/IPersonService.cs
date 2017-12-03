@@ -8,7 +8,7 @@ using Application.Base;
 
 namespace Application.Abstract
 {
-    public interface IPersonService :  IEntityService<Person>
+    public interface IPersonService :  IEntityService<Personas>
     {
     }
 }

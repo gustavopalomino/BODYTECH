@@ -11,11 +11,11 @@ namespace Domain.Test
     [TestFixture]
     public class ClienteTest
     {
-        ClienteBusiness clienteBusiness;
+        Cliente cliente;
         [SetUp]
         public void Initialize()
         {
-            clienteBusiness = new ClienteBusiness();
+            cliente = new Cliente();
         }
 
         //Cliente
@@ -30,7 +30,7 @@ namespace Domain.Test
             };
 
             //Actuar
-            string resultado = clienteBusiness.ValidarCliente(entity);
+            string resultado = entity.ValidarCliente();
 
             //Afirmar
             Assert.AreEqual("La estatura de un cliente debe estar entre 1 y 3 metros", resultado);
@@ -47,7 +47,7 @@ namespace Domain.Test
             };
 
             //Actuar
-            string resultado = clienteBusiness.ValidarCliente(entity);
+            string resultado = entity.ValidarCliente();
 
             //Afirmar
             Assert.AreEqual("El peso de un cliente no puede ser negativo", resultado);
@@ -64,7 +64,7 @@ namespace Domain.Test
             };
 
             //Actuar
-            string resultado = clienteBusiness.ValidarCliente(entity);
+            string resultado = entity.ValidarCliente();
 
             //Afirmar
             Assert.AreEqual("Cliente registrado exitosamente!", resultado);

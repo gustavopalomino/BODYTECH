@@ -8,20 +8,20 @@ using Domain.Entities;
 
 namespace Domain.Business
 {
-    public interface IDiasBusiness
-    {
-        string ValidateDias(Dias entity);
-    }
+    //public interface IDiasBusiness
+    //{
+    //    string ValidateDias(Dias entity);
+    //}
     public class DiasBusiness
     {
-        public string ValidateDias (Dias entity)
-        {
-            if ( entity.Nombre_Dia.Length  < 3 || entity.Nombre_Dia.Length > 20)
-            {
-                return "El nombre del dia debe tener minimo 3 caracteres y maximo 20!";
-            }
+        //public string ValidateDias (Dias entity)
+        //{
+        //    if ( entity.Nombre_Dia.Length  < 3 || entity.Nombre_Dia.Length > 20)
+        //    {
+        //        return "El nombre del dia debe tener minimo 3 caracteres y maximo 20!";
+        //    }
 
-            return "Dia Regitrado correctamente!";
-        }
+        //    return "Dia Regitrado correctamente!";
+        //}
     }
 }
