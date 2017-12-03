@@ -19,11 +19,10 @@ namespace Domain.Entities
         [MaxLength(40)]
         public string discapacidad { get; set; }
 
-        [MaxLength(40)]
+        [Required]
         public double Estatura { get; set; }
 
         [Required]
-        [MaxLength(40)]
         public double Peso { get; set; }
 
         public string ValidarCliente()

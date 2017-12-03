@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstracts\IAdminstradorService.cs" />
+    <Compile Include="Abstracts\IClienteService.cs" />
     <Compile Include="Abstracts\ICountryService.cs" />
     <Compile Include="Abstracts\IDiasService.cs" />
     <Compile Include="Abstracts\IPersonService.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="Base\IEntityService.cs" />
     <Compile Include="Base\IService.cs" />
     <Compile Include="Implements\AdministradorService.cs" />
+    <Compile Include="Implements\ClienteService.cs" />
     <Compile Include="Implements\CountryService.cs" />
     <Compile Include="Implements\DiasService.cs" />
     <Compile Include="Implements\PersonService.cs" />

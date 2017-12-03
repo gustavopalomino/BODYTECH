@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstracts\IAdministradorRepository.cs" />
+    <Compile Include="Abstracts\IClienteRepository.cs" />
     <Compile Include="Abstracts\ICountryRepository.cs" />
     <Compile Include="Abstracts\IDiasRepositoty.cs" />
     <Compile Include="Abstracts\IFormattedValidationException.cs" />
