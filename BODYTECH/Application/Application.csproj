@@ -61,6 +61,7 @@
     <Compile Include="Abstracts\ICliente_PaquetesService.cs" />
     <Compile Include="Abstracts\ICountryService.cs" />
     <Compile Include="Abstracts\IDiasService.cs" />
+    <Compile Include="Abstracts\IEjercicioService.cs" />
     <Compile Include="Abstracts\IPersonService.cs" />
     <Compile Include="Abstracts\IRutinaService.cs" />
     <Compile Include="Base\EntityService.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Implements\Cliente_PaquetesService.cs" />
     <Compile Include="Implements\CountryService.cs" />
     <Compile Include="Implements\DiasService.cs" />
+    <Compile Include="Implements\EjercicioService.cs" />
     <Compile Include="Implements\PersonService.cs" />
     <Compile Include="Implements\RutinaService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
