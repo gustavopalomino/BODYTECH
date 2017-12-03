@@ -63,6 +63,7 @@
     <Compile Include="Abstracts\ICountryRepository.cs" />
     <Compile Include="Abstracts\IDiasRepositoty.cs" />
     <Compile Include="Abstracts\IEjercicioRepository.cs" />
+    <Compile Include="Abstracts\IEntrenadorRepository.cs" />
     <Compile Include="Abstracts\IFormattedValidationException.cs" />
     <Compile Include="Abstracts\IGenericRepository.cs" />
     <Compile Include="Abstracts\IPersonRepository.cs" />
