@@ -14,7 +14,7 @@ namespace Application.Test
 {
     [TestFixture]
     public class CountryServiceTest
-    {
+    { 
         private Mock<ICountryRepository> _mockRepository;
         private ICountryService _service;
         Mock<IUnitOfWork> _mockUnitWork;

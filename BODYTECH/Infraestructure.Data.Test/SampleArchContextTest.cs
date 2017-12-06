@@ -38,6 +38,22 @@ namespace Infraestructure.Data.Test
             };
             context.Countries.AddRange(listCountry);
             context.SaveChanges();
+
+            var listPaquetes = new List<Paquetes>() {
+             new Paquetes() { Nombre = "Premium", Dias=90, Descripcion="Paquete Basico", Precio=200 },
+             new Paquetes() { Nombre = "Push", Dias=90, Descripcion="Paquete Basico", Precio=200  },
+             new Paquetes() { Nombre = "Flash", Dias=90, Descripcion="Paquete Basico", Precio=200  }
+            };
+            context.Paquete.AddRange(listPaquetes);
+            context.SaveChanges();
+
+            //var listPerson = new List<Personas>() {
+            // new Personas() { NumeroIdentificacion="123", Nombres = "Andres Calamardo", Sexo="M", Telefono="314567878", Direccion="Calle 13C # 12-23" },
+            // new Personas() { NumeroIdentificacion="1234", Nombres = "Andrea garcia", Sexo="M", Telefono="314567878", Direccion="Calle 13C # 12-23" },
+            // new Personas() { NumeroIdentificacion="12345", Nombres = "Ronald valera", Sexo="M", Telefono="314567878", Direccion="Calle 13C # 12-23" }
+            //};
+            //context.Persons.AddRange(listPerson);
+            //context.SaveChanges();
         }
 
         public class DropCreateIfChangeInitializer : DropCreateDatabaseIfModelChanges<SampleArchContextTest>

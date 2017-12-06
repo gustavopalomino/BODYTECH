@@ -12,7 +12,7 @@ namespace Domain.Entities
     //[Table("Person")]
     public class Personas : Entity<int>
     {
-        [Key]
+        //[Key]
         [Required] 
         [MaxLength(10)]
         public string NumeroIdentificacion { get; set; }

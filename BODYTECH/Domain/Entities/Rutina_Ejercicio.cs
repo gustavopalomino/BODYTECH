@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Entities
 {
-    public class Rutina_Ejercicio
+    public class Rutina_Ejercicio : Entity<int>
     {
         [Required]
         public int Series { get; set; }

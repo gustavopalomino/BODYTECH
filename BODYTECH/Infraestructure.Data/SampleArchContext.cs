@@ -23,5 +23,6 @@ namespace Infraestructure.Data
         }
         public DbSet<Personas> Persons { get; set; }
         public DbSet<Country> Countries { get; set; }
+        public DbSet<Paquetes> Paquete { get; set; }
     }
 }

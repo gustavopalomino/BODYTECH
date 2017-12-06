@@ -66,8 +66,11 @@
     <Compile Include="Abstracts\IEntrenadorRepository.cs" />
     <Compile Include="Abstracts\IFormattedValidationException.cs" />
     <Compile Include="Abstracts\IGenericRepository.cs" />
+    <Compile Include="Abstracts\IPaquetesRepository.cs" />
     <Compile Include="Abstracts\IPersonRepository.cs" />
     <Compile Include="Abstracts\IRutinaRepository.cs" />
+    <Compile Include="Abstracts\IRutinasRepository.cs" />
+    <Compile Include="Abstracts\IRutina_EjercicioRepository.cs" />
     <Compile Include="Abstracts\IUnitOfWork.cs" />
     <Compile Include="Base\BaseEntity.cs" />
     <Compile Include="Base\IEntity.cs" />

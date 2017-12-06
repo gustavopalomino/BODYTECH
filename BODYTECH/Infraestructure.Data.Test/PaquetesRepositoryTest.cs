@@ -10,24 +10,25 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Infraestructure.Data.Test
+
 {
     [TestFixture]
-    public class CountryRepositoryTest
+    public class PaquetesRepositoryTest
     {
         DbConnection connection;
         SampleArchContextTest databaseContext;
-        CountryRepository objRepo;
+        PaquetesRepository objRepo;
 
         [SetUp]
         public void Initialize()
         {
             connection = Effort.DbConnectionFactory.CreateTransient();
             databaseContext = new SampleArchContextTest(connection);
-            objRepo = new CountryRepository(databaseContext);
+            objRepo = new PaquetesRepository(databaseContext);
         }
 
         [Test]
-        public void Country_Repository_Get_ALL()
+        public void Paquetes_Repository_Get_ALL()
         {
             //Act
             var result = objRepo.GetAll().ToList();
@@ -36,19 +37,19 @@ namespace Infraestructure.Data.Test
 
             Assert.IsNotNull(result);
             Assert.AreEqual(3, result.Count);
-            Assert.AreEqual("US", result[0].Name);
-            Assert.AreEqual("India", result[1].Name);
-            Assert.AreEqual("Russia", result[2].Name);
+            Assert.AreEqual("Premium", result[0].Nombre);
+            Assert.AreEqual("Push", result[1].Nombre);
+            Assert.AreEqual("Flash", result[2].Nombre);
         }
 
         [Test]
-        public void Country_Repository_Create()
+        public void Paquetes_Repository_Create()
         {
             //Arrange
-            Country c = new Country() { Name = "UK" };
+            Paquetes p = new Paquetes() { Nombre = "Premium", Precio=200, Descripcion="Paquete basico", Dias=90 };
 
             //Act
-            objRepo.Add(c);
+            objRepo.Add(p);
             databaseContext.SaveChanges();
 
             var lst = objRepo.GetAll().ToList();
@@ -56,7 +57,8 @@ namespace Infraestructure.Data.Test
             //Assert
 
             Assert.AreEqual(4, lst.Count);
-            Assert.AreEqual("UK", lst.Last().Name);
+            Assert.AreEqual("Premium", lst.Last().Nombre);
         }
+
     }
 }

@@ -66,9 +66,12 @@
     <Compile Include="DiasServiceTest.cs" />
     <Compile Include="EjercicioServiceTest.cs" />
     <Compile Include="EntrenadorServiceTest.cs" />
+    <Compile Include="PaquetesServiceTest.cs" />
     <Compile Include="PersonServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RutinaServiceTest.cs" />
+    <Compile Include="RutinasServiceTest.cs" />
+    <Compile Include="Rutina_EjercicioServiceTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
